@@ -1,0 +1,127 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+    color: #000000;
+    font-size: 16px;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 1rem;
+    text-align: center;
+    font-size: 24px;
+}
+
+/* Job Posting Form */
+.post-job-form {
+    background-color: #ffffff;
+    color: #000000;
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    border: 2px solid #000000;
+    border-radius: 8px;
+}
+
+.post-job-form h2 {
+    margin-bottom: 20px;
+    color: #000000;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #000000;
+}
+
+.form-group input[type="text"],
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #000000;
+    border-radius: 4px;
+}
+
+.form-group textarea {
+    height: 150px;
+}
+
+input[type="submit"] {
+    background-color: #000000;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    display: block;
+    width: 100%;
+}
+
+input[type="submit"]:hover {
+    background-color: #333333;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 20px;
+    border-top: 1px solid #000000;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .post-job-form {
+        width: 90%;
+        padding: 15px;
+    }
+
+    header, footer {
+        padding: 0.5rem;
+    }
+
+    .form-group label {
+        font-size: 14px;
+    }
+
+    .form-group input[type="text"],
+    .form-group textarea {
+        padding: 8px;
+    }
+
+    .form-group textarea {
+        height: 120px;
+    }
+
+    input[type="submit"] {
+        padding: 8px 16px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header {
+        font-size: 20px;
+    }
+
+    .post-job-form h2 {
+        font-size: 22px;
+    }
+}

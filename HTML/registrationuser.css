@@ -1,0 +1,121 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #ffffff; /* Assuming you want a dark background for the entire page */
+    color: #fff; /* White text color for better contrast */
+}
+
+.split-container {
+    display: flex;
+    height: 100vh; /* Use full viewport height */
+    flex-direction: row; /* Align children (card-section and login-section) in a row */
+}
+
+.card-section {
+    flex-basis: 50%; /* Take up half the width of the container */
+    background-color: #403d3d; /* Dark background for the card section */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Stack children vertically */
+}
+
+.card-content {
+    max-width: 500px;
+    text-align: center;
+}
+
+.logo {
+    max-width: 236px; /* Set a maximum width for the logo */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 2rem; /* Add some space below the logo */
+    border-radius: 50%; /* If you want a circular shape */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+.title {
+    font-size: 24px; /* Large font size for the title */
+    color: #ffffff; /* White text color for visibility */
+    margin-bottom: 1rem;
+}
+
+.login-section {
+    flex-basis: 50%; /* Also take up half the width of the container */
+    background-color: #ffffff; /* Light background for contrast */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.login-content {
+    width: 100%; /* Full width of the section */
+    max-width: 500px; /* Max width for larger screens */
+    padding: 2rem; /* Padding around the content */
+}
+
+.input {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #333;
+    background-color: #fff;
+}
+
+.login-button {
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    border-radius: 4px;
+    background-color: #181818; /* Dark background for the button */
+    color: #ffffff; /* White text for the button */
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 1rem; /* Space above the button */
+    cursor: pointer;
+}
+
+.login-button:hover {
+    background-color: #555; /* Darker background on hover */
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.checkbox {
+    margin-right: 0.5rem;
+}
+
+.forgot-password, .login-link {
+    color: #333; /* Dark text for readability on light background */
+    text-align: center;
+    text-decoration: none;
+    font-size: 0.875rem; /* Smaller font size for secondary text */
+}
+
+.forgot-password:hover, .login-link:hover {
+    text-decoration: underline; /* Underline on hover for better interaction feedback */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .split-container {
+        flex-direction: column; /* Stack sections vertically on small screens */
+    }
+
+    .card-section, .login-section {
+        flex-basis: auto; /* Allow sections to size based on content */
+        width: 100%; /* Full width of the viewport */
+    }
+
+    .logo {
+        max-width: 150px; /* Smaller logo for small screens */
+    }
+}
