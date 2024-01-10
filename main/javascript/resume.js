@@ -1,9 +1,8 @@
-import {auth} from "./dataBase.js";
+import {auth, signOut} from "./dataBase.js";
 
 const userName = document.getElementById("user-name");
-
+const logout = document.getElementById("logout-button");
 auth.onAuthStateChanged(function(user) {
-    console.log("Workingggg")
 
     if (user) {
         const userEmail = user.email;
@@ -16,3 +15,7 @@ auth.onAuthStateChanged(function(user) {
         window.location.href = "./signup.html"
     }
 });
+
+logout.addEventListener("click", async ()=> {
+    await signOut(auth);
+})
