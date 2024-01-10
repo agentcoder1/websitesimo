@@ -1,19 +1,23 @@
-import {createUserWithEmailAndPassword, updateProfile} from "../dataBase";
+import {auth, createUserWithEmailAndPassword, updateProfile} from "../dataBase.js";
 
 const submit = document.getElementById("submit-button");
 
-submit.addEventListener("click", (e)=>{
+submit.addEventListener("click",  async (e) => {
     e.preventDefault();
-    const fullName = document.getElementById("full-name");
-    const email = document.getElementById("email-address");
-    const phoneNumber = document.getElementById("phone-number");
-    const password = document.getElementById("password");
+    const fullName = document.getElementById("full-name").value;
+    const email = document.getElementById("email-address").value;
+    const phoneNumber = document.getElementById("phone-number").value;
+    const password = document.getElementById("password").value;
 
-    createUserWithEmailAndPassword(email, password).then(createdUser=>{
-        updateProfile(createdUser.user, {displayName: fullName, phoneNumber: phoneNumber})
+    console.log(fullName, email, phoneNumber, password)
+
+    createUserWithEmailAndPassword(auth,email, password).then(async createdUser => {
+        await updateProfile(createdUser.user, {displayName: fullName, phoneNumber: phoneNumber});
+
+        window.location.href = "./resume.html"
 
 
-    }).catch(error=>{
-        alert(error)
+    }).catch(error => {
+        console.log(error)
     })
 })

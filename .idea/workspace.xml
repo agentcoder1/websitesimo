@@ -5,11 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a435bdd7-b81a-4ebb-b4db-ce5338ef2299" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/main/javascript/resume.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/resume.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main/javascript/authentication/signup.js" beforeDir="false" afterPath="$PROJECT_DIR$/main/javascript/authentication/signup.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/javascript/dataBase.js" beforeDir="false" afterPath="$PROJECT_DIR$/main/javascript/dataBase.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/javascript/resume.js" beforeDir="false" afterPath="$PROJECT_DIR$/main/javascript/resume.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/resume.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/resume.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/signup.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -64,7 +63,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1704850041853</updated>
-      <workItem from="1704850049802" duration="3497000" />
+      <workItem from="1704850049802" duration="4556000" />
     </task>
     <servers />
   </component>
