@@ -9,7 +9,6 @@ submit.addEventListener("click",  async (e) => {
     const phoneNumber = document.getElementById("phone-number").value;
     const password = document.getElementById("password").value;
 
-    console.log(fullName, email, phoneNumber, password)
 
     createUserWithEmailAndPassword(auth,email, password).then(async createdUser => {
         await updateProfile(createdUser.user, {displayName: fullName, phoneNumber: phoneNumber});
