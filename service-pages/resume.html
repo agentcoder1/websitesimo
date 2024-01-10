@@ -1,0 +1,502 @@
+<html>
+  <head>
+    <title>TaxHeal - Candidate's Resume</title>
+  </head>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=7" />
+  <link
+    rel="shortcut icon"
+    href="../assets/logo and favicon/favicon.png"
+    type="image/x-icon"
+  />
+
+  <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+    crossorigin="anonymous"
+  />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet"
+  />
+
+  <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+    crossorigin="anonymous"
+  />
+
+  <link rel="stylesheet" href="../css/navbar.css" />
+
+  <link rel="stylesheet" href="../css/common-navbar-style.css" />
+
+  <link rel="stylesheet" href="../css/footer.css" />
+
+  <style>
+    form {
+      margin: 2% 20%;
+    }
+
+    @media (max-width: 767px) {
+      form {
+        margin: 5%;
+      }
+    }
+  </style>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="../index.html">
+        <img
+          class="logo-one"
+          src="../assets/logo and favicon/logo.jpeg"
+          alt="Navbar logo"
+        />
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="true"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html">Home</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html#about">About Us</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact Us</a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link btn btn-primary"
+              href="#"
+              id="navbarDropdown"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              <span>Login / SignUp</span>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="../service-pages/admin-login.html"
+                >As Admin</a
+              >
+              <a class="dropdown-item" href="../service-pages/signup.html"
+                >As Candidate</a
+              >
+              <a class="dropdown-item" href="../routes/user.js">Log Out</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <h1 class="head text-center">Complete Your Resume Here</h1>
+
+    <form
+      class="jumbotron"
+      method="POST"
+      action="../routes/resume.js"
+      onsubmit="return validation()"
+    >
+      <small class="form-text"
+        >Want to see the job opportunities ?
+        <a href="../service-pages/job-list.html">Click Here</a></small
+      >
+      <br />
+      <hr />
+      <br />
+      <h5 class="text-muted">
+        Tell us about yourself
+      </h5>
+      <br />
+      <div class="form-group">
+        <label for="exampleInputname1">Full Name *</label>
+        <input
+          type="text"
+          class="form-control"
+          id="exampleInputname1"
+          name="username"
+        />
+        <br />
+
+        <label class="my-1 mr-2" for="inlineFormCustomSelectPosition"
+          >Which position do you want to apply to? *</label
+        >
+        <select
+          class="custom-select my-1 mr-sm-2"
+          id="inlineFormCustomSelectPosition"
+          name="jobposition"
+        >
+          <option selected>Select your position</option>
+          <option value="Accounts & Finance Executive Accountant"
+            >Accounts & Finance Executive Accountant</option
+          >
+          <option value="Accountant - GST">Accountant - GST</option>
+          <option value="Web Developer">Web Developer</option>
+          <option value="Management Accountant">Management Accountant</option>
+        </select>
+        <br /><br />
+
+        <label for="exampleInputprofession1">Profession *</label>
+        <input
+          type="text"
+          class="form-control"
+          id="exampleInputprofession1"
+          name="profession"
+        />
+
+        <div class="form-row">
+          <div class="col-lg-4 col-md-6">
+            <br />
+            <label for="exampleInputcity1">City *</label>
+            <input
+              type="text"
+              class="form-control"
+              id="exampleInputcity1"
+              name="city"
+            />
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <br />
+            <label for="exampleInputstate1">State/Province *</label>
+            <input
+              type="text"
+              class="form-control"
+              id="exampleInputstate1"
+              name="state"
+            />
+          </div>
+          <div class="col-lg-4">
+            <br />
+            <label for="exampleInputzipcode1">Zip Code *</label>
+            <input
+              type="text"
+              id="exampleInputzipcode1"
+              class="form-control"
+              name="zipcode"
+            />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="col">
+            <br />
+            <label for="exampleInputnumber1">Phone *</label>
+            <input
+              type="text"
+              class="form-control"
+              id="exampleInputnumber1"
+              name="contactno"
+            />
+          </div>
+          <div class="col">
+            <br />
+            <label for="exampleInputemail1">Email Address *</label>
+            <input
+              type="text"
+              class="form-control"
+              id="exampleInputemail1"
+              name="emailid"
+            />
+          </div>
+        </div>
+      </div>
+      <br />
+      <hr />
+      <br />
+      <h5 class="text-muted">
+        Tell us about your previous job position
+      </h5>
+      <br />
+      <div class="form-group">
+        <label for="exampleInputposition1">Previous Job Position *</label>
+        <input
+          type="text"
+          class="form-control"
+          id="exampleInputposition1"
+          name="position"
+        />
+
+        <div class="form-row">
+          <div class="col">
+            <br />
+            <label for="exampleInputcity2">City *</label>
+            <input
+              type="text"
+              class="form-control"
+              id="exampleInputcity2"
+              name="jobcity"
+            />
+          </div>
+          <div class="col">
+            <br />
+            <label for="exampleInputstate2">State *</label>
+            <input
+              type="text"
+              class="form-control"
+              id="exampleInputstate2"
+              name="jobstate"
+            />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="col">
+            <br />
+            <label for="exampleInputstartdate1">Starting Date *</label>
+            <input
+              type="date"
+              class="form-control"
+              id="exampleInputstartdate1"
+              name="startdate"
+            />
+          </div>
+          <div class="col">
+            <br />
+            <label for="exampleInputenddate1">Ending Date *</label>
+            <input
+              type="date"
+              class="form-control"
+              id="exampleInputenddate1"
+              name="enddate"
+            />
+          </div>
+        </div>
+      </div>
+      <br />
+      <hr />
+      <br />
+      <h5 class="text-muted">
+        Tell us about your education
+      </h5>
+      <br />
+      <div class="form-group">
+        <div class="form-row">
+          <div class="col-lg-6 col-md-6">
+            <label for="exampleInputschoolname">School Name *</label>
+            <input
+              type="text"
+              class="form-control"
+              id="exampleInputschoolname"
+              name="schoolname"
+            />
+          </div>
+          <div class="col-lg-6 col-md-6">
+            <label for="exampleInputschoollocation">School Location *</label>
+            <input
+              type="text"
+              class="form-control"
+              id="exampleInputschoollocation"
+              name="schoollocation"
+            />
+          </div>
+          <div class="col-lg-6 col-md-6">
+            <br />
+            <label for="exampleInputdegree">Degree *</label>
+            <input
+              type="text"
+              class="form-control"
+              id="exampleInputdegree"
+              name="degree"
+            />
+          </div>
+          <div class="col-lg-6 col-md-6">
+            <br />
+            <label for="exampleInputfield">Field of Study *</label>
+            <input
+              type="text"
+              class="form-control"
+              id="exampleInputfield"
+              name="field"
+            />
+          </div>
+          <div class="col-lg-6 col-md-6">
+            <br />
+            <label for="exampleInputstartdate2">Starting Date *</label>
+            <input
+              type="date"
+              class="form-control"
+              id="exampleInputstartdate2"
+              name="schoolstartdate"
+            />
+          </div>
+          <div class="col-lg-6 col-md-6">
+            <br />
+            <label for="exampleInputenddate2">Ending Date *</label>
+            <input
+              type="date"
+              class="form-control"
+              id="exampleInputenddate2"
+              name="schoolenddate"
+            />
+          </div>
+        </div>
+      </div>
+      <br />
+      <hr />
+      <br />
+      <h5 class="text-muted">
+        Tell us about your skills
+      </h5>
+      <br />
+      <div class="form-group">
+        <label for="exampleInputskills">Skills *</label>
+        <textarea
+          class="form-control"
+          id="exampleInputskills"
+          name="skills"
+          cols="30"
+          rows="3"
+        ></textarea>
+      </div>
+      <br />
+      <hr />
+      <br />
+      <h5>
+        Why should you be hired for this role? *
+      </h5>
+      <div class="form-group">
+        <br />
+        <textarea
+          class="form-control"
+          id="hirequestion"
+          name="hirequestion"
+          cols="30"
+          rows="10"
+        ></textarea>
+        <br />
+        <small class="form-text">
+          Please answer it in a professional manner.
+        </small>
+      </div>
+      <br />
+
+      <button type="submit" class="btn btn-dark" name="submit">Submit</button>
+    </form>
+
+    <footer id="contact">
+      <div class="footer-top">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-4 col-md-6">
+              <a href="../index.html">
+                <img
+                  class="logo2"
+                  src="../assets/logo and favicon/logo.jpeg"
+                  alt="footer logo"
+                />
+              </a>
+              <p class="content1">
+                TaxHeal.in (a unit of Smilyo Private Limited) started as an ERP
+                solution provider in 2016, now serving clients across 18
+                different industries including manufacturers, traders,
+                wholesalers, shops, contractors, housekeeping, security,
+                builders, logistics, schools, hospitals, chemists, resturants,
+                hotels, professionals, software, finance and chit-fund
+                companies. <br /><br />
+                Proudly associated with a 30 years old Chartered Accountants
+                firm for expertise and professional solutions, our primary focus
+                is client satisfaction and peace of mind.
+              </p>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+              <h6 class="content2">CONTACT US</h6>
+              <div class="social-icons">
+                <a
+                  class="icon-link"
+                  href="https://www.facebook.com/"
+                  ><i class="fa fa-facebook" aria-hidden="true"></i
+                ></a>
+                <a class="icon-link" href="https://www.instagram.com/"
+                  ><i class="fa fa-instagram" aria-hidden="true"></i
+                ></a>
+                <a class="icon-link" href="https://twitter.com/"
+                  ><i class="fa fa-twitter" aria-hidden="true"></i
+                ></a>
+                <a
+                  class="icon-link"
+                  href="https://www.linkedin.com/"
+                  ><i class="fa fa-linkedin" aria-hidden="true"></i
+                ></a>
+
+                <br /><br />
+                <p class="contact-details">
+                  <i class="fa fa-envelope" aria-hidden="true"></i> &nbsp;
+                 m <br /><br />
+                  <i class="fa fa-phone" aria-hidden="true"></i> &nbsp;
+                   <br /><br />
+                  <i class="fa fa-map-marker" aria-hidden="true"></i> &nbsp;
+
+                </p>
+              </div>
+            </div>
+
+            <div class="col-lg-4 mt-3">
+              <h4>TaxHeal.in</h4>
+              <div>
+                <iframe
+                  class="map"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.713516667254!2d77.25054961455767!3d28.548329494638878!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce30c95555543%3A0x4893017bf990f99e!2sSrivastava%20Kumar%20%26%20Co.%20Chartered%20Accountants!5e0!3m2!1sen!2sin!4v1594877981766!5m2!1sen!2sin"
+                  width="440"
+                  height="440"
+                  frameborder="0"
+                  style="border: 0;"
+                  allowfullscreen=""
+                  aria-hidden="false"
+                  tabindex="0"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer2">
+          TaxHeal.in&nbsp;&copy;&nbsp;2020 All Rights Reserved.
+        </div>
+      </div>
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="../javascript/index.js"></script>
+
+    <script src="../javascript/resume-validation.js"></script>
+  </body>
+</html>

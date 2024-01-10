@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>TaxHeal - Job Opportunities</title>
+
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      rel="shortcut icon"
+      href="../assets/logo and favicon/favicon.png"
+      type="image/x-icon"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="../css/navbar.css" />
+
+    <link rel="stylesheet" href="../css/common-navbar-style.css" />
+
+    <link rel="stylesheet" href="../css/job-list.css" />
+
+    <link rel="stylesheet" href="../css/footer.css" />
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="../index.html">
+        <img
+          class="logo-one"
+          src="../assets/logo and favicon/logo.jpeg"
+          alt="Navbar logo"
+        />
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="true"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html">Home</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="../service-pages/job-list.html"
+              >Job Opportunities</a
+            >
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html#about">About Us</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact Us</a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link btn btn-primary"
+              href="#"
+              id="navbarDropdown"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              <span>Login / SignUp</span>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="../service-pages/admin-login.html"
+                >As Admin</a
+              >
+              <a class="dropdown-item" href="../service-pages/signup.html"
+                >As Candidate</a
+              >
+              <a class="dropdown-item" href="../routes/user.js">Log Out</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Modal for job 1-->
+    <div
+      class="modal fade"
+      id="exampleModalCenter1"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalCenterTitle"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">
+              Accounts & Finance Executive Accountant
+            </h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <h5>Job Description:</h5>
+            <p>
+              Work From Home, Part time and full time multiple position
+              available. Responsible for managing general Accounting functions
+              and/or Accounting Policy functions. Overseeing the daily
+              activities of the accounting department and ensuring that all
+              major projects, month-end, and year-end reports are completed
+              accurately and on time. Ensuring that all accounting processes
+              align and current financial legislation. Prepare and publish
+              timely & accurate financial statements including income
+              statements, balance sheets, and cash flow statements Responsible
+              for month-end and year-end close process Preference will be given
+              to immediate joiners
+            </p>
+            <h5>Role:</h5>
+            <ul>
+              <li>Accountant</li>
+              <li>Book Keeper/ Accounts Assistant</li>
+              <li>Finance Assistant</li>
+              <li>Finance Manager</li>
+            </ul>
+            <h5>Posted On:</h5>
+            <p>26th May 2020</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-dark" data-dismiss="modal">
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Modal for job 2-->
+    <div
+      class="modal fade"
+      id="exampleModalCenter2"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalCenterTitle"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">
+              Accountant - GST
+            </h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <strong>Only Female candidate Apply.</strong> <br /><br />
+            <h6>CTC : Upto 20 K</h6>
+            <br />
+            <h6>Notice Period : Upto 15 Days</h6>
+            <br />
+            <h5>Work Description:</h5>
+            <ul>
+              <li>Must Have experience in End to End GST Finalization.</li>
+              <li>Must Have Knowledge in Advance Excel.</li>
+              <li>
+                Currently Providing Work from home facility with Permanent Role(
+                Candidate Must have Laptop / Computer with Good Network
+                Connection )
+              </li>
+            </ul>
+            <h5>Posted On</h5>
+            <p>27th May 2020</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-dark" data-dismiss="modal">
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal for job 3-->
+    <div
+      class="modal fade"
+      id="exampleModalCenter3"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalCenterTitle"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">
+              Web Developer
+            </h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <h5>
+              <i class="fa fa-home" aria-hidden="true"></i>&nbsp; Work From Home
+            </h5>
+            <h5>Selected candidate's day-to-day responsibilities include:</h5>
+            <ol>
+              <li>Integrating APIs</li>
+              <li>
+                Designing, developing, and implementing UI validation frameworks
+              </li>
+              <li>Developing, maintaining and upgrading websites</li>
+              <li>
+                Designing and maintaining database architectures and code
+                diagrams
+              </li>
+              <li>Designing, planning, and implementing web apps</li>
+              <li>
+                Working on JavaScript and Bootstrap in OOP/MVC design patterns
+              </li>
+              <li>Working on backend with php</li>
+            </ol>
+            <h5>Skills Required:</h5>
+            <ol>
+              <li>MySQL</li>
+              <li>JavaScript</li>
+              <li>Bootstrap</li>
+            </ol>
+            <h5>Perks:</h5>
+            <ol>
+              <li>Certificate</li>
+              <li>Letter of recommendation</li>
+              <li>Flexible work hours</li>
+            </ol>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-dark" data-dismiss="modal">
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal for job 4 -->
+    <div
+      class="modal fade"
+      id="exampleModalCenter4"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalCenterTitle"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">
+              Management Accountant
+            </h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <h5>Job Description:</h5>
+            <p>
+              MORE are expanding the team for one of our global FMCG clients; a
+              global umbrella group with multiple international brands under it.
+              <br /><br />
+              This is a great opportunity working within a new team, creating
+              impactful communications across the world and developing best
+              practices for the various brands. <br /><br />
+              We believe that our client is unlike any other organisation. We
+              seek long-term sustainable growth through responsible business
+              practices and product innovation, providing our consumers with
+              exceptional brand experiences, today and tomorrow. <br /><br />
+              In this role, you will have overall responsibility of budgeting,
+              forecasting, funds management and financial analysis along with
+              day to day operations and process management. This role will
+              report into the FD.
+            </p>
+            <h5>Responsibilities:</h5>
+            <ol>
+              <li>
+                <h6>Process Management:</h6>
+                <ul>
+                  <li>
+                    Maintain overall accounts and make sure the company is fully
+                    compliant with all local laws
+                  </li>
+                  <li>
+                    Work with the company's auditors and manage a few outsourced
+                    functions
+                  </li>
+                  <li>
+                    Process routine accounting transactions and own the
+                    reporting process
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <h6>Funds Management:</h6>
+                <ul>
+                  <li>Weekly forecast cash flow and manage available funds</li>
+                  <li>
+                    Ensure that sufficient funds are available to meet ongoing
+                    operational and capital investment requirements
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <h6>Day To Day Operations:</h6>
+                <ul>
+                  <li>
+                    Oversee day to day reconciliation with various clients and
+                    partners
+                  </li>
+                  <li>
+                    Manage & oversee the daily operations of the finance team
+                  </li>
+                  <li>
+                    Monitoring & Analysing Accounting data & produce financial
+                    reports or statements
+                  </li>
+                  <li>
+                    Maintain ledgers & co-ordinate with team for book closure
+                    activities (monthly & annual)
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <h6>Budgeting:</h6>
+                <ul>
+                  <li>
+                    Prepare monthly / quarterly / annual budget projections
+                  </li>
+                  <li>
+                    Liaison with internal teams for monthly budget &
+                    consumption; prepare variance analysis
+                  </li>
+                  <li>
+                    Report to FD on variances from the established budget, and
+                    the reasons for those variances
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <h6>Financial Analysis:</h6>
+                <ul>
+                  <li>
+                    Interpret the company's financial results to management and
+                    recommend improvement activities.
+                  </li>
+                  <li>
+                    Create additional analyses and reports as requested by
+                    management.
+                  </li>
+                  <li>Legal & Statutory requirements and issues.</li>
+                  <li>Ensuring compliance with legal requirements</li>
+                  <li>
+                    Engage in benchmarking studies to establish areas of
+                    potential operational improvement.
+                  </li>
+                  <li>
+                    Maintaining and protecting the company's financial
+                    information/reports
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <h6>Requirements:</h6>
+                <ul>
+                  <li>
+                    Need someone who enjoys managing finances and has 3+ years
+                    experience working in finance department.
+                  </li>
+                  <li>People with start-up experience preferred.</li>
+                  <li>Should have lead audits.</li>
+                  <li>Experience in a multi currency group essential</li>
+                  <li>An agency back group will be beneficial</li>
+                  <li>USGAAP experience beneficial</li>
+                  <li>
+                    Must be a strong technical accountant with an eye for
+                    detail.
+                  </li>
+                </ul>
+              </li>
+            </ol>
+            <h5>Desired Skills and Experience:</h5>
+            <ol>
+              <li>Accounting</li>
+              <li>Budgeting</li>
+              <li>Chartered Accountant</li>
+              <li>Financial Analysis</li>
+              <li>Financial Planning</li>
+              <li>Financial Reporting</li>
+            </ol>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-dark" data-dismiss="modal">
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row job-section">
+      <div class="job-card col-lg-4 col-md-6">
+        <div class="card shadow rounded">
+          <h4 class="p-3">Accounts & Finance Executive Accountant</h4>
+          <div class="card-body">
+            <h5>
+              <i class="fa fa-briefcase" aria-hidden="true"></i>&nbsp;&nbsp;0 -
+              5 years
+            </h5>
+            <hr />
+            <button
+              type="button"
+              class="btn btn-primary"
+              data-toggle="modal"
+              data-target="#exampleModalCenter1"
+            >
+              See Details
+            </button>
+            <a href="../service-pages/signup.html" class="button btn btn-dark"
+              >Apply Now</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="job-card col-lg-4 col-md-6">
+        <div class="card shadow rounded">
+          <h4 class="p-3">Accountant - GST</h4>
+          <div class="card-body">
+            <h5>
+              <i class="fa fa-briefcase" aria-hidden="true"></i>&nbsp;&nbsp;1 +
+              years
+            </h5>
+            <hr />
+            <button
+              type="button"
+              class="btn btn-primary"
+              data-toggle="modal"
+              data-target="#exampleModalCenter2"
+            >
+              See Details
+            </button>
+            <a href="../service-pages/signup.html" class="button btn btn-dark"
+              >Apply Now</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="job-card col-lg-4 col-md-6">
+        <div class="card shadow rounded">
+          <h4 class="p-3">Web Developer</h4>
+          <div class="card-body">
+            <h5>
+              <i class="fa fa-briefcase" aria-hidden="true"></i>&nbsp;&nbsp;0 -
+              3 years
+            </h5>
+            <hr />
+            <button
+              type="button"
+              class="btn btn-primary"
+              data-toggle="modal"
+              data-target="#exampleModalCenter3"
+            >
+              See Details
+            </button>
+            <a href="../service-pages/signup.html" class="button btn btn-dark"
+              >Apply Now</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="job-card col-lg-4 col-md-6">
+        <div class="card shadow rounded">
+          <h4 class="p-3">Management Accountant</h4>
+          <div class="card-body">
+            <h5>
+              <i class="fa fa-briefcase" aria-hidden="true"></i
+              >&nbsp;&nbsp;Full-time
+            </h5>
+            <hr />
+            <button
+              type="button"
+              class="btn btn-primary"
+              data-toggle="modal"
+              data-target="#exampleModalCenter4"
+            >
+              See Details
+            </button>
+            <a href="../service-pages/signup.html" class="button btn btn-dark"
+              >Apply Now</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer id="contact">
+      <div class="footer-top">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-4 col-md-6">
+              <a href="../index.html">
+                <img
+                  class="logo2"
+                  src="../assets/logo and favicon/logo.jpeg"
+                  alt="footer logo"
+                />
+              </a>
+              <p class="content1">
+
+              </p>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+              <h6 class="content2">CONTACT US</h6>
+              <div class="social-icons">
+                <a
+                  class="icon-link"
+                  href=""
+                  ><i class="fa fa-facebook" aria-hidden="true"></i
+                ></a>
+                <a class="icon-link" href=""
+                  ><i class="fa fa-instagram" aria-hidden="true"></i
+                ></a>
+                <a class="icon-link" href=""
+                  ><i class="fa fa-twitter" aria-hidden="true"></i
+                ></a>
+                <a
+                  class="icon-link"
+                  href=""
+                  ><i class="fa fa-linkedin" aria-hidden="true"></i
+                ></a>
+
+                <br /><br />
+                <p class="contact-details">
+                  <i class="fa fa-envelope" aria-hidden="true"></i> &nbsp;
+                   <br /><br />
+                  <i class="fa fa-phone" aria-hidden="true"></i> &nbsp;
+                   <br /><br />
+                  <i class="fa fa-map-marker" aria-hidden="true"></i> &nbsp;
+
+                </p>
+              </div>
+            </div>
+
+            <div class="col-lg-4 mt-3">
+              <h4>TaxHeal.in</h4>
+              <div>
+                <iframe
+                  class="map"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.713516667254!2d77.25054961455767!3d28.548329494638878!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce30c95555543%3A0x4893017bf990f99e!2sSrivastava%20Kumar%20%26%20Co.%20Chartered%20Accountants!5e0!3m2!1sen!2sin!4v1594877981766!5m2!1sen!2sin"
+                  width="440"
+                  height="440"
+                  frameborder="0"
+                  style="border: 0;"
+                  allowfullscreen=""
+                  aria-hidden="false"
+                  tabindex="0"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer2">
+
+        </div>
+      </div>
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="../javascript/index.js"></script>
+  </body>
+</html>

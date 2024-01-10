@@ -1,184 +1,204 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="This is indeed clone for testing">
-    <meta name="keywords" content="indeed, HTML, CSS, JS, JAVASCRIPT, frontend developer, web developer, sass, bootstrap">
-    <script src="https://kit.fontawesome.com/b97736e1cd.js" crossorigin="anonymous"></script>
-    <link rel="icon" href="images/favicon.ico">
-    <script src="bootstrap/bootstrap.js"></script>
-    <link rel="stylesheet" href="bootstrap/bootstrap.css">
-    <link rel="stylesheet" href="fontawesome-free-6.2.1-web/css/all.css">
-    <link rel="stylesheet" href="style/global/dark_vars.css" path-dir="" id="theme-file">
-    <link rel="stylesheet" href="style/global/navbar.css">
-    <link rel="stylesheet" href="style/global/global.css">
-    <link rel="stylesheet" href="style/global/footer.css">
-    <link rel="stylesheet" href="style/pages/home/index.css" class="page-style">
-    <title>jobs search </title>
-  </head>
-  <body>
-  <!--loading page-->
-    <div class="loading-page">
-      <img src="images/logo.png" path-dir="" alt="logo">
-      <div class="loader">
-        <div class="loader-move"></div>
-      </div>
-    </div>
-  <!--Navbar-->
-    <section>
-      <nav class="container-xxl px-3 pt-2">
-        <div class="col row">
-          <a href="index.html" class="col-2"><img src='images/logo.png' path-dir="" alt="indeed-logo" class="logo"></a>
-          <ul class="list-unstyled col-5">
-            <li class="active"><a href="index.html" class="text-decoration-none">Find jobs</a></li>
-            <li><a href="HTML/companies.html" class="text-decoration-none">Companies</a></li>
-            <li><a href="HTML/all_jobs.html" class="text-decoration-none">All jobs</a></li>
-          </ul>
-        </div>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=7" />
 
-        <div class="col-2 row">
-          <i id="theme-ico" class="fa-solid col fa-sun"></i>
-          <a href="HTML/my_jobs.html" class="col text-decoration-none bookmark"><i class="fa-solid col fa-bookmark"></i></a>
-          <!--list__icon__mobile-->
-          <i class="fa-solid col fa-bars"></i>
+    <link
+      rel="shortcut icon"
+      href="./assets/logo and favicon/favicon.png"
+      type="image/x-icon"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="./css/navbar.css" />
+
+    <link rel="stylesheet" href="./css/index.css" />
+
+    <link rel="stylesheet" href="./css/footer.css" />
+
+    <title>TaxHeal - Online HR Portal</title>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="index.html">
+        <img
+          class="logo-one"
+          src="assets/logo and favicon/logo.jpeg"
+          alt="Navbar logo"
+        />
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="true"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="./index.html">Home</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="./service-pages/job-list.html"
+              >Job Opportunities</a
+            >
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact Us</a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link btn btn-primary"
+              href="#"
+              id="navbarDropdown"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              <span>Login / SignUp</span>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="./service-pages/admin-login.html"
+                >As Admin</a
+              >
+              <a class="dropdown-item" href="./service-pages/signup.html"
+                >As Candidate</a
+              >
+              <a class="dropdown-item" href="./routes/user.js"
+                >Log Out</a
+              >
+
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <section class="head">
+      <div
+        id="carouselExampleCaptions"
+        class="carousel slide"
+        data-ride="carousel"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              src="assets/images/Job-Interview.jpg"
+              class="d-block w-100"
+              alt="header image"
+            />
+            <div class="carousel-caption d-none d-md-block">
+              <h1>Your Dream Job <br />Is Not A Dream Anymore</h1>
+              <p style="font-size: 13.5px;">
+                TOP COMPANIES | DIRECT APPLY | SUITABLE JOBS FOR EVERYONE
+              </p>
+              <form class="form-group">
+                <a
+                  class="btn btn-dark btn-lg mt-2"
+                  href="./service-pages/job-list.html"
+                  >Find Your Dream Job</a
+                >
+              </form>
+            </div>
+          </div>
         </div>
-      </nav>
+      </div>
     </section>
 
-    <!--Mobile-list -->
-    <div class="mobile-list p-3 d-none">
-      <i class="fa-solid fa-xmark"></i>
-      <ul>
-        <li class="row py-3 my-3"><a href="index.html" class="text-decoration-none col-10">Find jobs</a><i class="fa-solid fa-angle-right col"></i>
-        </li>
-        <li class="row py-3 my-3"><a href="HTML/companies.html" class="text-decoration-none col-10">Companies</a><i class="fa-solid fa-angle-right col"></i>
-        </li>
-        <li class="row py-3 my-3"><a href="HTML/my_jobs.html" class="text-decoration-none col-10">My jobs</a><i class="fa-solid fa-angle-right col"></i>
-        </li>
-        <li class="row py-3 my-3"><a href="#" class="text-decoration-none col-10">Salaries</a><i class="fa-solid fa-angle-right col"></i>
-        </li>
-        <li class="row py-3 my-3"><a href="HTML/all_jobs.html" class="text-decoration-none col-10">All jobs</a><i class="fa-solid fa-angle-right col"></i>
-        </li>
-        <li class="row py-3 my-3"><a href="#" class="text-decoration-none col-10">My Resume</a><i class="fa-solid fa-angle-right col"></i>
-        </li>
-      </ul>
-      <img src="images/logo.png" path-dir="" alt="menu-logo" class="logo-menu">
-    </div>
-  <!--main content-->
-    <main>
-    <!--jobs-search-->
-      <div class="jobs__search">
-        <div class="container">
-            <h1 class="display-5 mb-4">Find Your Job</h1>
-  
-            <div class="search-container row px-4 pb-2 pt-4">
-              <!--search bar-->
-            <div class="search-bar-cont col-6 mb-4">
-              <label for="search-bar" class="mb-2">job Title</label><br>
-              <div class="search-cont">
-                <input list="jobs-title" id="search-bar" class="search-bar px-5" type="text" placeholder="All jobs" autocomplete="off">
 
-                <ul class="search-suggest list-unstyled mt-2"></ul>
+
+
+
+            <div class="col-lg-4 col-md-6">
+              <h6 class="content2">CONTACT US</h6>
+              <div class="social-icons">
+                <a
+                  class="icon-link"
+                  href="https://www.facebook.com//"
+                  ><i class="fa fa-facebook" aria-hidden="true"></i
+                ></a>
+                <a class="icon-link" href="https://www.instagram.com//"
+                  ><i class="fa fa-instagram" aria-hidden="true"></i
+                ></a>
+                <a class="icon-link" href="https://twitter.com/"
+                  ><i class="fa fa-twitter" aria-hidden="true"></i
+                ></a>
+                <a
+                  class="icon-link"
+                  href="https://www.linkedin.com/company/"
+                  ><i class="fa fa-linkedin" aria-hidden="true"></i
+                ></a>
+
+                <br /><br />
+                <p class="contact-details">
+                  <i class="fa fa-envelope" aria-hidden="true"></i> &nbsp;
+                  todorecto@gmail.com <br /><br />
+                  <i class="fa fa-phone" aria-hidden="true"></i> &nbsp;
+                  06666666666 <br /><br />
+                  <i class="fa fa-map-marker" aria-hidden="true"></i> &nbsp;
+                  sist
+                </p>
               </div>
-
-              <i class="fa-solid fa-magnifying-glass"></i>
-              <i class="fa-solid fa-circle-xmark"></i>
             </div>
 
-            <!--select location-->
-              <div class="location-inp-cont col-4 mb-4">
-                <label for="location-inp" class="mb-2">Location</label><br>
 
-                  <div class="location-cont">
-                    <input id="location-inp" type="text" class="px-5" placeholder="Germany" autocomplete="off">
-                    <ul class="location-suggest list-unstyled mt-2"></ul>
-                  </div>
-                
-                <i class="fa-solid fa-location-dot"></i>
-                <i class="fa-solid fa-circle-xmark"></i>
-
-              </div>
-  
-              <button class="btn col-2 mb-4 search_btn">Search</button>
-            </div>
+        <div class="footer2">
+          dr wayne in the house
         </div>
-      </div>
-    <!--stats--> 
-      <div class="stats">
-        <div class="container-xxl row px-3 py-4 mx-auto">
-          <div class="stats-item col-md">
-            <i class="fa-solid fa-building"></i>
-            <strong class="display-5 companies-state">0</strong>
-            <h4>Company</h4>
-          </div>
-  
-          <div class="stats-item col-md">
-            <i class="fa-solid fa-user"></i>
-            <strong class="display-5 users-state">0</strong>
-            <h4>user</h4>
-          </div>
-
-          <div class="stats-item col-md">
-            <i class="fa-solid fa-briefcase"></i>
-            <strong class="display-5 jobs-state">0</strong>
-            <h4>job</h4>
-          </div>
-        </div>
-      </div>
-    </main>
-  <!--search  Results-->
-    <div class="container-xxl pt-5 mb-5 search_results" style="display: none;">
-        <!--back-->
-        <div class="back_to_search">
-          <a href="index.html" class="text-decoration-none">Back to search</a>
-        </div>
-
-      <div class="jobs">
-        <!--jobs header-->
-          <div class="jobs__header p-2 px-3" id="jobs_header">
-            <h1>All jobs in Germany</h1>
-            <span class="results_num"></span>
-          </div>
-        <!--jobs--> 
-          <div class="jobs__cont"></div>
-          <div class="jobs__pagination mt-3">
-            <ul class="list-unstyled">
-            </ul>
-          </div>
-        </div>
-        <div class="job__details p-4 pt-5">
-          <div class="job__details__header py-4">
-          </div>
-        </div>
-    </div>
-  <!--footer-->
-    <footer>
-      <div class="container-lg row px-3 py-5 mx-auto footer-cont ">
-        <div class="footer-logo col-lg-3"><img src="images/logo.png" alt='logo'></div>
-
-        <div class="footer-links col-lg-7">
-          <ul class="list-unstyled row">
-            <li class="col-md-4"><a href="index.html" class="text-decoration-none">Find jobs</a></li>
-            <li class="col-md-4"><a href="HTML/companies.html" class="text-decoration-none">Companies</a></li>
-            <li class="col-md-4"><a href="#" class="text-decoration-none">Salaries</a></li>
-            <li class="col-md-4"><a href="HTML/my_jobs.html" class="text-decoration-none">My jobs</a></li>
-            <li class="col-md-4"><a href="HTML/all_jobs.html" class="text-decoration-none">See All jobs</a></li>
-          </ul>
-        </div>
-
-        <div class="col-lg footer-social">
-          <a href="https://www.linkedin.com/in/omar-kamal-a76303250/" target="_blank" class="text-decoration-none"><i class="fa-brands fa-linkedin"></i></a>
-
-          <a href="https://github.com/omar-kamal-elkhabbaty" target="_blank" class="text-decoration-none"><i class="fa-brands fa-github"></i></a>
-
-          <a href="mailto:omar.muhammed.kamal@gmail.com" target="_blank" class="text-decoration-none"><i class="fa-solid fa-envelope"></i></a>
-        </div>
-
       </div>
     </footer>
 
-    <script src="javascript/main.js"></script>
-    <script src="javascript/jobs_search.js"></script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="javascript/index.js"></script>
+
   </body>
 </html>
