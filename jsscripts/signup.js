@@ -21,7 +21,7 @@ const passwordInput = document.getElementById('exampleInputpassword1');
 const contactInput = document.getElementById('exampleInputnumber1');
 
 // Add a submit event listener to the form
-signupForm.addEventListener('submit', function(event) {
+signupForm.addEventListener('submit', function (event) {
     event.preventDefault();
 
     // Get user info
