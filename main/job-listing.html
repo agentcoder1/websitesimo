@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./styles/styles.css">
+    <script src="./javascript/jobListing.js" defer type="module"></script>
+
+
+</head>
+<body>
+
+<div class="flex flex-col min-h-screen">
+    <header class="px-6 py-4 flex justify-between items-center">
+        <div class="font-semibold text-xl">Job Portal</div>
+        <nav class="space-x-4"><a class="hover:underline" href="#">Home</a><a class="hover:underline" href="#">About</a><a
+                class="hover:underline" href="#">Contact</a></nav>
+    </header>
+    <main id="jobs-container" class="container mx-auto px-4 py-8 grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 flex-grow">
+
+        <div class="rounded-lg border bg-card text-card-foreground shadow-sm flex flex-col space-y-4" data-v0-t="card">
+            <div class="flex flex-col space-y-1.5 p-6"><h3 class="text-2xl font-semibold leading-none tracking-tight">
+                Frontend Developer</h3>
+                <p class="text-sm text-muted-foreground">Acme Inc, New York</p></div>
+            <div class="p-6"><p class="text-sm">
+                We are looking for a Frontend Developer with experience in building high-performing, scalable
+                applications.
+            </p>
+                <h3 class="font-semibold text-lg">Requirements:</h3>
+                <ul class="list-disc list-inside text-sm">
+                    <li>Experience with React.js or Vue.js</li>
+                    <li>Understanding of REST APIs</li>
+                    <li>Knowledge of CSS and HTML</li>
+                </ul>
+                <h3 class="font-semibold text-lg">Academic Background:</h3>
+                <ul class="list-disc list-inside text-sm">
+                    <li>Bachelor's degree in Computer Science or related field</li>
+                    <li>Or equivalent professional experience</li>
+                </ul>
+                <h3 class="font-semibold text-lg">Salary:</h3>
+                <p class="text-sm">$80,000 - $100,000 per year</p></div>
+            <div class="flex items-center p-6">
+                <button class="inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-black text-white hover:bg-opacity-90 h-10 px-4 py-2">
+                    Apply
+                </button>
+            </div>
+        </div>
+
+        <div class="rounded-lg border bg-card text-card-foreground shadow-sm flex flex-col space-y-4" data-v0-t="card">
+            <div class="flex flex-col space-y-1.5 p-6"><h3 class="text-2xl font-semibold leading-none tracking-tight">
+                Backend Developer</h3>
+                <p class="text-sm text-muted-foreground">XYZ Corp, San Francisco</p></div>
+            <div class="p-6"><p class="text-sm">
+                We are looking for a Backend Developer with experience in managing server-side logic and database
+                architecture.
+            </p>
+                <h3 class="font-semibold text-lg">Requirements:</h3>
+                <ul class="list-disc list-inside text-sm">
+                    <li>Experience with Node.js or Python</li>
+                    <li>Understanding of SQL and NoSQL databases</li>
+                    <li>Knowledge of Docker and Kubernetes</li>
+                </ul>
+                <h3 class="font-semibold text-lg">Academic Background:</h3>
+                <ul class="list-disc list-inside text-sm">
+                    <li>Bachelor's degree in Computer Science or related field</li>
+                    <li>Or equivalent professional experience</li>
+                </ul>
+                <h3 class="font-semibold text-lg">Salary:</h3>
+                <p class="text-sm">$90,000 - $120,000 per year</p></div>
+            <div class="flex items-center p-6">
+                <button class="inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-black text-white hover:bg-opacity-90 h-10 px-4 py-2">
+                    Apply
+                </button>
+            </div>
+        </div>
+    </main>
+    <footer class="bg-gray-800 text-white px-6 py-4 text-center"><p class="text-sm">© 2024 Job Portal. All rights
+        reserved.</p>
+        <p class="text-xs mt-2">123 Main St, Anytown, USA | +1 (123) 456-7890 | info@jobportal.com</p></footer>
+</div>
+</body>
+</html>
