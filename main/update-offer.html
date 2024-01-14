@@ -2,13 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Update Job</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="./styles/styles.css">
-    <script src="./javascript/updateOffer.js" defer type="module"></script>
+    <script src="./javascript/createOffer.js" defer type="module"></script>
+    <script src="./javascript/authentication/logout.js" defer type="module"></script>
+
 </head>
 <body>
 <div class="flex flex-col min-h-screen">
+
     <header class="flex h-20 w-full shrink-0 items-center px-4 md:px-6">
         <a class="mr-6 flex items-center" href="#">
             <svg
@@ -27,28 +30,32 @@
             </svg>
             <span class="sr-only">Acme Inc</span>
         </a>
-        <nav class="ml-auto flex gap-4 sm:gap-6">
-            <a class="text-sm font-medium hover:underline underline-offset-4" href="dashboard.html">
+        <nav class="ml-auto flex gap-4 sm:gap-6 items-center justify-center">
+
+            <a class="text-sm font-medium  hover:underline underline-offset-4" href="create-offer.html">
+                Post job
+            </a>
+            <a class="text-sm font-medium text-gray-500 hover:underline underline-offset-4 " href="dashboard.html" >
                 Dashboard
             </a>
-            <a class="text-sm font-medium hover:underline underline-offset-4" href="create-offer.html">
-                Post jobs
-            </a>
-            <a class="text-sm font-medium hover:underline underline-offset-4" href="applications.html">
+            <a class="text-sm font-medium text-gray-500 hover:underline underline-offset-4" href="applications.html">
                 Applications
             </a>
-            <a class="text-sm font-medium hover:underline underline-offset-4" href="">
+            <a id="logout-button" class="items-center ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 group relative flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-red-500 hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-400" href="">
                 Logout
             </a>
         </nav>
     </header>
+
+
+
     <main class="container mx-auto px-4 py-8 flex-grow">
-        <div class="rounded-lg  bg-card text-card-foreground max-w-screen-xl	  flex flex-col space-y-4" data-v0-t="card">
+        <div class="rounded-lg mx-auto  bg-card text-card-foreground max-w-screen-xl		  flex flex-col space-y-4" data-v0-t="card">
             <div class="flex flex-col space-y-1.5 p-6">
-                <h3 class="text-2xl font-semibold leading-none tracking-tight">Create Job Offer</h3>
+                <h3 class="text-2xl text-center font-semibold leading-none tracking-tight">Update Job Offer</h3>
             </div>
-            <div class="p-6">
-                <form class="space-y-4">
+            <div class="p-6  w-full">
+                <form class="space-y-4 ">
                     <div>
                         <label for="title" class="block text-sm font-medium">
                             Job Title

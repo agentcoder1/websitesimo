@@ -2,6 +2,28 @@ import {addDoc, auth, collection, createUserWithEmailAndPassword, db, updateProf
 
 const submit = document.getElementById("submit-button");
 
+
+auth.onAuthStateChanged(function(user) {
+
+    const userType = user.photoURL;
+
+    if(userType === "employee" ) {
+        window.location.href = "../main/job-listing.html"//
+
+    }
+
+    if(userType === "company" ) {
+        window.location.href = "../main/dashboard.html"//
+
+    }
+
+
+
+
+});
+
+
+
 submit.addEventListener("click",  async (e) => {
     e.preventDefault();
     const fullName = document.getElementById("full-name").value;

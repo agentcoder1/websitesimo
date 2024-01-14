@@ -1,4 +1,4 @@
-import {addDoc, collection, db, doc, getDoc, updateDoc} from "./dataBase.js";
+import {addDoc, auth, collection, db, doc, getDoc, updateDoc} from "./dataBase.js";
 
 const submit = document.getElementById("submit-button");
 const submitState =  document.getElementById("submit-state");
@@ -6,6 +6,24 @@ const submitState =  document.getElementById("submit-state");
 const urlParams = new URLSearchParams(window.location.search);
 
 const idValue = urlParams.get('id');
+
+auth.onAuthStateChanged(function(user) {
+
+    if(user) {
+        const userType = user.photoURL;
+
+        if(userType === "employee" ) {
+            window.location.href = "../main/job-listing.html"//
+
+        }
+    }else {
+        window.location.href = "../main/login.html"
+
+    }
+
+
+
+});
 
 
 const docRef = doc(db,"jobs", idValue);

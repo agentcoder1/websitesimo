@@ -1,8 +1,24 @@
-import {addDoc, collection, db} from "./dataBase.js";
+import {addDoc, auth, collection, db} from "./dataBase.js";
 
 const submit = document.getElementById("submit-button");
 const submitState =  document.getElementById("submit-state");
+auth.onAuthStateChanged(function(user) {
 
+    if(user) {
+        const userType = user.photoURL;
+
+        if(userType === "employee" ) {
+            window.location.href = "../main/job-listing.html"//
+
+        }
+    }else {
+        window.location.href = "../main/login.html"
+
+    }
+
+
+
+});
 submit.addEventListener("click", async (e)=>{
     e.preventDefault();
 

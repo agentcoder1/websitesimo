@@ -26,6 +26,12 @@ auth.onAuthStateChanged(function(user) {
 window.addEventListener("load", async ()=>{
     await getDocs(jobs)
         .then(querySnapshot => {
+
+            if(querySnapshot.length === 0) {
+                loadingIndicator.innerText="There are no jobs posted.";
+
+            }
+
             querySnapshot.forEach(doc => {
                 loadingIndicator.innerText="";
 

@@ -29,6 +29,12 @@ window.addEventListener("load", async ()=>{
     await getDocs(jobs)
 
             .then(querySnapshot => {
+
+                if(querySnapshot.length ===0) {
+                    loadingIndicator.innerText="You have 0 jobs posted.";
+
+                }
+
             querySnapshot.forEach(doc => {
                 const job = doc.data();
                 const jobId = doc.id
