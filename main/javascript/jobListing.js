@@ -2,11 +2,14 @@ import {collection, db, getDocs} from "./dataBase.js";
 
 const jobs = collection(db, "jobs");
 const jobsContainer = document.getElementById("jobs-container");
+const loadingIndicator = document.getElementById("loading");
 
 window.addEventListener("load", async ()=>{
     await getDocs(jobs)
         .then(querySnapshot => {
             querySnapshot.forEach(doc => {
+                loadingIndicator.innerText="";
+
                 const job = doc.data();
                 const HTML =
                     `
@@ -42,6 +45,8 @@ window.addEventListener("load", async ()=>{
             });
         })
         .catch(error => {
+            loadingIndicator.innerText="";
+
             console.error('Error ', error);
         });
 
