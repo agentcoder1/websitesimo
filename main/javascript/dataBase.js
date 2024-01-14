@@ -10,15 +10,14 @@ import { collection, addDoc, getDocs } from "https://www.gstatic.com/firebasejs/
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-    // ... your firebase config
-    apiKey: "AIzaSyC7EurZJY3vJRQpWsSTx02uX-KMod5xQRg",
-    authDomain: "assignement1-d8723.firebaseapp.com",
-    databaseURL: "https://assignement1-d8723-default-rtdb.firebaseio.com",
-    projectId: "assignement1-d8723",
-    storageBucket: "assignement1-d8723.appspot.com",
-    messagingSenderId: "327347476719",
-    appId: "1:327347476719:web:a4d03f83488200c667e31a"
+    apiKey: "AIzaSyBmle4ID0VAdNHTIKH2w-5Y3Lr7ifg1ymU",
+    authDomain: "nodal-fountain-403922.firebaseapp.com",
+    projectId: "nodal-fountain-403922",
+    storageBucket: "nodal-fountain-403922.appspot.com",
+    messagingSenderId: "256749464572",
+    appId: "1:256749464572:web:5d39dabd681cc01d94a079"
 };
+
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);

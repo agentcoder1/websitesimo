@@ -5,10 +5,12 @@
     <title>Title</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="./styles/styles.css">
-    <script src="./javascript/dashboard.js" defer type="module"></script>
+    <script src="./javascript/jobListing.js" defer type="module"></script>
+
 
 </head>
 <body>
+
 <header class="flex h-20 w-full shrink-0 items-center px-4 md:px-6">
     <a class="mr-6 flex items-center" href="#">
         <svg
@@ -44,23 +46,16 @@
 </header>
 <div class="flex flex-col min-h-screen">
 
+    <p id="loading">Getting Jobs...</p>
 
-    <main class="container mx-auto px-4 py-8 flex-grow">
-        <p id="loading">Getting Jobs...</p>
-
-
-        <div id="jobs-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+    <main id="jobs-container" class="container mx-auto px-4 py-8 grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 flex-grow">
 
 
-
-
-
-        </div>
     </main>
-    <footer class="bg-gray-800 text-white px-6 py-4 text-center">
-        <p class="text-sm">© 2024 Job Portal. All rights reserved.</p>
-        <p class="text-xs mt-2">123 Main St, Anytown, USA | +1 (123) 456-7890 | info@jobportal.com</p>
-    </footer>
+
+    <footer class="bg-gray-800 text-white px-6 py-4 text-center"><p class="text-sm">© 2024 Job Portal. All rights
+        reserved.</p>
+        <p class="text-xs mt-2">123 Main St, Anytown, USA | +1 (123) 456-7890 | info@jobportal.com</p></footer>
 </div>
 </body>
 </html>
