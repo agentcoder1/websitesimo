@@ -19,8 +19,8 @@ window.addEventListener("load", async ()=>{
                 </div>
                 <div class="p-4">
                     <p class="text-base mb-2 font-medium  text-gray-900">${job.company}</p>
-                    <p class="text-sm mb-2">${job.description}</p>
-                    <p class="text-sm">${job.salary}</p>
+                    <p class="text-base mb-2  text-gray-600">${job.description}</p>
+                    <p class="text-sm text-gray-900">${job.salary}</p>
                 </div>
                 <div class="w-full max-w-[320px] flex gap-2 pb-4 pl-4">
                  <button  class="w-full items-center ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 group relative flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
