@@ -28,6 +28,7 @@ submit.addEventListener("click",  async (e) => {
     e.preventDefault();
     const fullName = document.getElementById("full-name").value;
     const email = document.getElementById("email-address").value;
+    const linkedIn = document.getElementById("linkedin-profile").value;
     const phoneNumber = document.getElementById("phone-number").value;
     const password = document.getElementById("password").value;
     const accountType = document.querySelector('input[name="accountType"]:checked').value;
@@ -42,6 +43,7 @@ submit.addEventListener("click",  async (e) => {
             await addDoc(users, {
                 fullName,
                 phoneNumber,
+                linkedIn,
                 email,
                 accountType,
                 uid: createdUser.user.uid
