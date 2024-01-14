@@ -5,6 +5,7 @@
     <title>Title</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="./styles/styles.css">
+    <script src="./javascript/authentication/logout.js" defer type="module"></script>
     <script src="./javascript/jobListing.js" defer type="module"></script>
 
 
@@ -29,26 +30,24 @@
         </svg>
         <span class="sr-only">Acme Inc</span>
     </a>
-    <nav class="ml-auto flex gap-4 sm:gap-6">
-        <a class="text-sm font-medium hover:underline underline-offset-4" href="dashboard.html">
-            Dashboard
-        </a>
-        <a class="text-sm font-medium hover:underline underline-offset-4" href="create-offer.html">
-            Post jobs
-        </a>
-        <a class="text-sm font-medium hover:underline underline-offset-4" href="applications.html">
-            Applications
-        </a>
-        <a class="text-sm font-medium hover:underline underline-offset-4" href="">
+    <nav class="ml-auto flex gap-4 items-center justify-center sm:gap-6">
+
+        <p id="user-name" class="text-sm font-medium hover:underline underline-offset-4">
+
+        </p>
+
+        <a id="logout-button" class="items-center ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 group relative flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-red-500 hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-400" href="">
             Logout
         </a>
     </nav>
 </header>
 <div class="flex flex-col min-h-screen">
 
-    <p id="loading">Getting Jobs...</p>
-
+    <div class="container mx-auto px-4  grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 flex-grow">
+        <p id="loading">Getting Jobs...</p>
+    </div>
     <main id="jobs-container" class="container mx-auto px-4 py-8 grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 flex-grow">
+
 
 
     </main>
@@ -57,5 +56,8 @@
         reserved.</p>
         <p class="text-xs mt-2">123 Main St, Anytown, USA | +1 (123) 456-7890 | info@jobportal.com</p></footer>
 </div>
+
+
+
 </body>
 </html>

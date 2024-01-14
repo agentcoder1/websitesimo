@@ -1,4 +1,4 @@
-import {auth, signInWithEmailAndPassword} from "../dataBase.js";
+import {auth, collection, db, getDoc, signInWithEmailAndPassword} from "../dataBase.js";
 
 const submit = document.getElementById("submit-button");
 
@@ -13,12 +13,35 @@ submit.addEventListener("click", async (e)=> {
         alert("Email and password are required!")
     }
 
+    const usersCollection = collection(db, "users");
 
-     signInWithEmailAndPassword(auth, email, password).then(()=>{
-         window.location.href = "./resume.html"
+
+    await signInWithEmailAndPassword(auth, email, password).then(()=>{
+        // window.location.href = "./resume.html"
 
      }).catch(error=>{
          console.error(error)
      })
+
+    auth.onAuthStateChanged(function(user) {
+
+          const userType = user.photoURL;
+
+          if(userType === "employee" ) {
+              window.location.href = "../main/job-listing.html"//
+
+          }
+
+        if(userType === "company" ) {
+            window.location.href = "../main/dashboard.html"//
+
+        }
+
+
+
+
+    });
+
+
 
 })

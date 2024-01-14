@@ -1,15 +1,37 @@
-import {collection, db, getDocs} from "./dataBase.js";
+import {auth, collection, db, deleteDoc, doc, getDocs} from "./dataBase.js";
 
 const jobs = collection(db, "jobs");
 const jobsContainer = document.getElementById("jobs-container");
 const loadingIndicator = document.getElementById("loading");
+
+const jobsCollection = collection(db, "jobs");
+
+auth.onAuthStateChanged(function(user) {
+
+    if(user) {
+        const userType = user.photoURL;
+
+        if(userType === "employee" ) {
+            window.location.href = "../main/job-listing.html"//
+
+        }
+    }else {
+        window.location.href = "../main/login.html"
+
+    }
+
+
+
+});
+
+
 window.addEventListener("load", async ()=>{
     await getDocs(jobs)
 
             .then(querySnapshot => {
             querySnapshot.forEach(doc => {
                 const job = doc.data();
-
+                const jobId = doc.id
                 const HTML =
 
                     `
@@ -23,12 +45,12 @@ window.addEventListener("load", async ()=>{
                     <p class="text-sm text-gray-900">${job.salary}</p>
                 </div>
                 <div class="w-full max-w-[320px] flex gap-2 pb-4 pl-4">
-                 <button  class="w-full items-center ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 group relative flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                 <a  href="../main/update-offer.html?id=${jobId}" id="${jobId}"  class="edit-button w-full items-center ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 group relative flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                         >
                     Edit
-                </button>
+                </a>
                   
-                    <button class="w-full items-center ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 group relative flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-red-500 hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-400">
+                    <button  id="${jobId}" class="delete-button w-full items-center ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 group relative flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-red-500 hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-400">
                     Delete
                 </button>
                 </div>
@@ -45,4 +67,24 @@ window.addEventListener("load", async ()=>{
 
         });
 
+    const deleteButtons = document.querySelectorAll(".delete-button")
+
+    deleteButtons.forEach((element)=>{
+        element.addEventListener("click", ()=>{
+            const docRef = doc(jobsCollection, element.id);
+
+            console.log("Deleting doc")
+
+            deleteDoc(docRef)
+                .then(() => {
+                    console.log("Document successfully deleted!");
+                })
+                .catch((error) => {
+                    console.error("Error deleting document: ", error);
+                });
+
+        })
+    })
+
 })
+
