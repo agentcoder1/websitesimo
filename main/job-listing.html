@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Job Listing</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="./styles/styles.css">
     <script src="./javascript/authentication/logout.js" defer type="module"></script>
@@ -42,13 +42,17 @@
 
     </nav>
 </header>
+
 <div class="flex flex-col min-h-screen">
 
-    <div class="container mx-auto px-4  grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 flex-grow">
+    <div class="container mx-auto px-4 flex gap-8 flex-col ">
+        <h3 class="text-3xl text-gray-800 font-semibold leading-none tracking-tight">Available Jobs</h3>
         <p id="loading">Getting Jobs...</p>
-    </div>
-    <main id="jobs-container" class="container mx-auto px-4 py-8 grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 flex-grow">
 
+    </div>
+
+    <main id="jobs-container"
+          class="container mx-auto px-4 py-2 grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 flex-grow">
 
 
     </main>
@@ -57,7 +61,6 @@
         reserved.</p>
         <p class="text-xs mt-2">123 Main St, Anytown, USA | +1 (123) 456-7890 | info@jobportal.com</p></footer>
 </div>
-
 
 
 </body>
