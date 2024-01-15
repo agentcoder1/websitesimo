@@ -41,11 +41,11 @@ window.addEventListener("load", async ()=>{
                 const HTML =
 
                     `
-                    <div class="rounded-lg border bg-card text-card-foreground shadow-sm flex flex-col space-y-4" data-v0-t="card">
-                <div class="flex flex-col space-y-1.5 p-4">
+                    <div class="rounded-lg border bg-card text-card-foreground shadow-sm flex flex-col " data-v0-t="card">
+                <div class="flex flex-col  p-4">
                     <h3 class="text-2xl font-semibold leading-none tracking-tight">${job.title}</h3>
                 </div>
-                <div class="p-4">
+                <div class="pl-4 pr-4 pb-4">
                     <p class="text-base mb-2 font-medium  text-gray-900">${job.company}</p>
                     <p class="text-base mb-2  text-gray-600">${job.description}</p>
                     <p class="text-sm text-gray-900">${job.salary}</p>

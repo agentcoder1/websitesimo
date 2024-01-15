@@ -11,7 +11,7 @@ auth.onAuthStateChanged(function(user) {
     if (user) {
         const userEmail = user.email;
         const displayName = user.displayName;
-        userName.textContent = `Hello ${displayName}`;
+        userName.textContent = `Hello ${displayName.split(" ")[0]}`;
 
 
     } else {
