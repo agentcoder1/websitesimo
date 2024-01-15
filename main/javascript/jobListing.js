@@ -1,15 +1,17 @@
-import {auth, collection, db, getDocs} from "./dataBase.js";
+import {auth, collection, db, getDocs, updateProfile} from "./dataBase.js";
 
 const jobs = collection(db, "jobs");
 const jobsContainer = document.getElementById("jobs-container");
 const loadingIndicator = document.getElementById("loading");
-
+const applyButtons = document.querySelectorAll(".apply-button")
+let currentUser;
+const applications = collection(db, "applications");
 
 auth.onAuthStateChanged(function(user) {
 
     if(user) {
-        const userType = user.photoURL;
-
+        const userType = user.photoURL.split("-")[0];
+        currentUser = user;
         if(userType === "company" ) {
             window.location.href = "../main/dashboard.html"//
 
@@ -36,6 +38,7 @@ window.addEventListener("load", async ()=>{
                 loadingIndicator.innerText="";
 
                 const job = doc.data();
+                const jobId = doc.id;
                 const HTML =
                     `
         <div class="rounded-lg border bg-card text-card-foreground shadow-sm flex flex-col space-y-4" data-v0-t="card">
@@ -57,9 +60,11 @@ window.addEventListener("load", async ()=>{
                 <h3 class="font-semibold text-lg">Salary:</h3>
                 <p class="text-sm">${job.salary}per year</p></div>
             <div class="flex items-center p-6">
-                <button id="${job.id}" class="inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-black text-white hover:bg-opacity-90 h-10 px-4 py-2">
-                    Apply
+            
+                <button id="${jobId}" class="apply-button inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-black text-white hover:bg-opacity-90 h-10 px-4 py-2">
+                    ${currentUser.photoURL.includes(jobId) ?'Applied': "Apply"}
                 </button>
+                
             </div>
         </div>
                     
@@ -73,6 +78,31 @@ window.addEventListener("load", async ()=>{
             loadingIndicator.innerText="";
 
             console.error('Error ', error);
-        });
+        })
 
 })
+
+jobsContainer.addEventListener("click", (e) => {
+    const applyButton = e.target.closest(".apply-button");
+
+    if (applyButton) {
+        const jobId = applyButton.id;
+        const data = auth.currentUser.photoURL;
+
+        updateProfile(auth.currentUser, { photoURL: `${data}-${jobId}` })
+            .then(() => {
+                // Profile updated successfully
+                console.log("User's displayName updated successfully");
+                applyButton.innerText = "Applied";
+
+
+
+
+            })
+            .catch((error) => {
+                // An error occurred
+                console.error("Error updating user's displayName:", error.message);
+            });
+
+    }
+});

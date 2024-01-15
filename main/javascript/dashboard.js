@@ -9,7 +9,7 @@ const jobsCollection = collection(db, "jobs");
 auth.onAuthStateChanged(function(user) {
 
     if(user) {
-        const userType = user.photoURL;
+        const userType = user.photoURL.split("-")[0];
 
         if(userType === "employee" ) {
             window.location.href = "../main/job-listing.html"//

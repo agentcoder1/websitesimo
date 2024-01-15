@@ -5,17 +5,20 @@ const submit = document.getElementById("submit-button");
 
 auth.onAuthStateChanged(function(user) {
 
-    const userType = user.photoURL;
+    if(user) {
+        const userType = user.photoURL.split("-")[0];
 
-    if(userType === "employee" ) {
-        window.location.href = "../main/job-listing.html"//
+        if(userType === "employee" ) {
+            window.location.href = "../main/job-listing.html"//
 
+        }
+
+        if(userType === "company" ) {
+            window.location.href = "../main/dashboard.html"//
+
+        }
     }
 
-    if(userType === "company" ) {
-        window.location.href = "../main/dashboard.html"//
-
-    }
 
 
 

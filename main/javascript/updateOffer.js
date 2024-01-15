@@ -1,7 +1,9 @@
 import {addDoc, auth, collection, db, doc, getDoc, updateDoc} from "./dataBase.js";
 
 const submit = document.getElementById("submit-button");
-const submitState =  document.getElementById("submit-state");
+const submitStateSuccess =  document.getElementById("submit-state-success");
+const submitStateError =  document.getElementById("submit-state-error");
+const innerSVG = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4 text-green-500" data-id="12"><polyline points="20 6 9 17 4 12"></polyline></svg>`
 
 const urlParams = new URLSearchParams(window.location.search);
 
@@ -10,7 +12,7 @@ const idValue = urlParams.get('id');
 auth.onAuthStateChanged(function(user) {
 
     if(user) {
-        const userType = user.photoURL;
+        const userType = user.photoURL.split("-")[0];
 
         if(userType === "employee" ) {
             window.location.href = "../main/job-listing.html"//
@@ -29,21 +31,27 @@ auth.onAuthStateChanged(function(user) {
 const docRef = doc(db,"jobs", idValue);
 submit.addEventListener("click", (e)=>{
 
+    e.preventDefault()
+
     const title = document.getElementById("title");
     const company = document.getElementById("company");
     const location = document.getElementById("location");
     const description = document.getElementById("description");
     const requirements = document.getElementById("requirements");
     const background = document.getElementById("background");
-
-
     const salary = document.getElementById("salary");
 
-        console.log(idValue)
+    submitStateSuccess.innerHTML = ""
+    submitStateError.innerHTML = ""
+
+    if(!title.value || !company.value||  !location.value || !description.value || !requirements.value|| !background.value || !salary.value) {
+        submitStateError.innerHTML = "Please fill the required inputs!"
+        return
+    }
 
 
-    submit.innerText = "Submitting..."
-    submitState.innerText = ""
+    submit.innerText = "Updating..."
+
 
 
 
@@ -56,14 +64,17 @@ submit.addEventListener("click", (e)=>{
         background: background.value,
         salary: salary.value
     }).then(()=>{
-        submitState.innerText = "Job has been updated with success!"
-        submit.innerText = "Submit"
+
+        submitStateSuccess.insertAdjacentHTML("beforeend", innerSVG)
+        submitStateSuccess.insertAdjacentHTML("beforeend", `Job has been updated with success!` )
+
+        submit.innerText = "Update Job"
 
 
     }).catch(e=>{
-        submit.innerText = "Submit"
+        submit.innerText = "Update Job"
         console.log(e);
-        submitState.innerText = "Something went wrong, please try again!"
+        submitStateError.innerText = "Something went wrong, please try again!"
 
 
     });

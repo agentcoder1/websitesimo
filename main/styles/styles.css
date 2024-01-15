@@ -4,3 +4,22 @@
 body {
     font-family: 'Inter', sans-serif;
 }
+
+input:active {
+    outline: none !important;
+
+
+}
+
+.hidden {
+    display: none;
+}
+
+input {
+
+    font-family: 'Inter', sans-serif;
+}
+
+textarea {
+    font-family: 'Inter', sans-serif;
+}
