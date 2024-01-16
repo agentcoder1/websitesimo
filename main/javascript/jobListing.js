@@ -98,7 +98,7 @@ jobsContainer.addEventListener("click", (e) => {
 
                         const userData = doc.data();
                         if (userData.uid === auth.currentUser.uid) {
-                            await addDoc(applications, {...userData, title: applyButton.getAttribute("jobTitle"), jobId});
+                            await addDoc(applications, {...userData,state: 'No state', title: applyButton.getAttribute("jobTitle"), jobId});
                             applyButton.innerText = "Applied";
 
                         }

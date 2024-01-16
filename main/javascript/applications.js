@@ -19,11 +19,11 @@ getDocs(usersRef).then(querySnapshot => {
                 </td>
 
                 <td style="text-transform: capitalize;" class="px-6 py-4">
-                    <a id="${userDoc.id}" href="#" class="text-sm font-medium text-indigo-600">View Application</a>
+                    <a  id="${userDoc.id}" href="../main/application-view-page.html?id=${userDoc.id}" class="text-sm font-medium text-indigo-600">View Application</a>
                 </td>
 
                 <td style="text-transform: capitalize;" class="px-6 py-4">
-                   No State
+                   ${application.state}
                 </td>
             </tr>
 

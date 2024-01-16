@@ -5,6 +5,7 @@
     <title>Application View</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="./styles/styles.css">
+    <script src="./javascript/viewApplication.js" defer type="module"></script>
 </head>
 <body>
 
@@ -28,10 +29,10 @@
         <span class="sr-only">Acme Inc</span>
     </a>
     <nav class="ml-auto flex gap-4 sm:gap-6">
-        <a class="text-sm font-medium hover:underline underline-offset-4" href="dashboard.html">
+        <a class="text-sm font-medium text-gray-500 hover:underline underline-offset-4" href="dashboard.html">
             Dashboard
         </a>
-        <a class="text-sm font-medium hover:underline underline-offset-4" href="create-offer.html">
+        <a class="text-sm font-medium text-gray-500 hover:underline underline-offset-4" href="create-offer.html">
             Post jobs
         </a>
         <a class="text-sm font-medium hover:underline underline-offset-4" href="applications.html">
@@ -53,46 +54,34 @@
         <dl class="divide-y divide-gray-100">
             <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
                 <dt class="text-sm font-medium leading-6 text-gray-900">Full name</dt>
-                <dd class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">Margot Foster</dd>
+
+                <dd id="applicant-name" class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">Loading...</dd>
             </div>
             <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
                 <dt class="text-sm font-medium leading-6 text-gray-900">Application for</dt>
-                <dd class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">Backend Developer</dd>
+
+                <dd id="job-title" class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">Loading...</dd>
             </div>
             <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
                 <dt class="text-sm font-medium leading-6 text-gray-900">Email address</dt>
-                <dd class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">margotfoster@example.com</dd>
+                <dd id="email" class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">Loading...</dd>
             </div>
-
-
             <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
-                <dt class="text-sm font-medium leading-6 text-gray-900">Attachments</dt>
-                <dd class="mt-2 text-sm text-gray-900 sm:col-span-2 sm:mt-0">
-                    <ul role="list" class="divide-y divide-gray-100 rounded-md border border-gray-200">
-
-                        <li class="flex items-center justify-between py-4 pl-4 pr-5 text-sm leading-6">
-                            <div class="flex w-0 flex-1 items-center">
-                                <svg class="h-5 w-5 flex-shrink-0 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                                    <path fill-rule="evenodd" d="M15.621 4.379a3 3 0 00-4.242 0l-7 7a3 3 0 004.241 4.243h.001l.497-.5a.75.75 0 011.064 1.057l-.498.501-.002.002a4.5 4.5 0 01-6.364-6.364l7-7a4.5 4.5 0 016.368 6.36l-3.455 3.553A2.625 2.625 0 119.52 9.52l3.45-3.451a.75.75 0 111.061 1.06l-3.45 3.451a1.125 1.125 0 001.587 1.595l3.454-3.553a3 3 0 000-4.242z" clip-rule="evenodd" />
-                                </svg>
-                                <div class="ml-4 flex min-w-0 flex-1 gap-2">
-                                    <span class="truncate font-medium">coverletter_back_end_developer.pdf</span>
-                                    <span class="flex-shrink-0 text-gray-400">4.5mb</span>
-                                </div>
-                            </div>
-                            <div class="ml-4 flex-shrink-0">
-                                <a href="#" class="font-medium text-indigo-600 hover:text-indigo-500">Download</a>
-                            </div>
-                        </li>
-                    </ul>
-                </dd>
+                <dt class="text-sm font-medium leading-6 text-gray-900">Phone number</dt>
+                <dd id="phone-number" class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">Loading...</dd>
             </div>
+            <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+                <dt class="text-sm font-medium leading-6 text-gray-900">LinkedIn Profile</dt>
+                <dd id="linkedin-profile" class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">Loading...</dd>
+            </div>
+
+
             <div class="w-full max-w-[320px] flex gap-2 pb-4 pl-4" >
-                <button  class="w-full items-center ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 group relative flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                <button id="approve-button"  class="w-full items-center ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 group relative flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                         >
                     Approve
                 </button>
-                <button class="w-full items-center ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 group relative flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-red-500 hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-400">
+                <button id="reject-button" class="w-full items-center ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 group relative flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-red-500 hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-400">
                     Reject
                 </button>
 
