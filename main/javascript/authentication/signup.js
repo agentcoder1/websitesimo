@@ -71,5 +71,11 @@ submit.addEventListener("click",  async (e) => {
 
     }).catch(error => {
         console.log(error)
+        if(error.toString().includes("FirebaseError: Firebase: Error (auth/email-already-in-use).")){
+            alert("Email already in use.");
+        }
+        if(error.toString().includes(`Password should be at least 6 characters`)) {
+          alert(`Password should be at least 6 characters`);
+        }
     })
 })

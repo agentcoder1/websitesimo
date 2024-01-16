@@ -36,14 +36,16 @@ submit.addEventListener("click", async (e)=> {
         alert("Email and password are required!")
     }
 
-    const usersCollection = collection(db, "users");
 
 
     await signInWithEmailAndPassword(auth, email, password).then(()=>{
-        // window.location.href = "./resume.html"
 
      }).catch(error=>{
-         console.error(error)
+        if(error.toString().includes("invalid-credential")) {
+            alert("Please make sure your email or password are correct!")
+            submit.innerText = "Login"
+
+        }
      })
 
     auth.onAuthStateChanged(function(user) {
