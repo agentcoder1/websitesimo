@@ -4,6 +4,8 @@ const usersRef = collection(db,"applications");
 
 
 const table = document.getElementById("table");
+const loading = document.getElementById("loading");
+loading.innerText = "Loading applications..."
 getDocs(usersRef).then(querySnapshot => {
     querySnapshot.forEach(userDoc => {
         let docRef;
@@ -28,9 +30,15 @@ getDocs(usersRef).then(querySnapshot => {
 
 `
         table.insertAdjacentHTML("beforeend", HTML);
-
-
     });
+
+    if(querySnapshot.length === 0 ) {
+
+        loading.innerText = "There are no applications yet!"
+    }else {
+        loading.innerText = ""
+
+    }
 
 })
 
