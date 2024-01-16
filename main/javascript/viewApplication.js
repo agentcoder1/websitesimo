@@ -1,4 +1,4 @@
-import {db, doc, getDoc, updateDoc} from "./dataBase.js";
+import {auth, db, doc, getDoc, updateDoc} from "./dataBase.js";
 
 
 const applicantName = document.getElementById("applicant-name");
@@ -17,7 +17,23 @@ const idValue = urlParams.get('id');
 
 const docRef = doc(db,"applications", idValue);
 
+auth.onAuthStateChanged(function(user) {
 
+    if(user) {
+        const userType = user.photoURL.split("-")[0];
+
+        if(userType === "employee" ) {
+            window.location.href = "../main/job-listing.html"//
+
+        }
+    }else {
+        window.location.href = "../main/login.html"
+
+    }
+
+
+
+});
 getDoc(docRef).then(doc=>{
 
   const   jobApplication = doc.data()

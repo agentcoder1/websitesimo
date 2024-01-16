@@ -1,7 +1,24 @@
-import {collection, db, doc, getDocs} from "./dataBase.js";
+import {auth, collection, db, doc, getDocs} from "./dataBase.js";
 
 const usersRef = collection(db,"applications");
 
+auth.onAuthStateChanged(function(user) {
+
+    if(user) {
+        const userType = user.photoURL.split("-")[0];
+
+        if(userType === "employee" ) {
+            window.location.href = "../main/job-listing.html"//
+
+        }
+    }else {
+        window.location.href = "../main/login.html"
+
+    }
+
+
+
+});
 
 const table = document.getElementById("table");
 const loading = document.getElementById("loading");
